@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title_head %}
+bici
+{% endblock title_head %}
+
+{% block h1_header %}
+{{bici}}
+{% endblock h1_header %}
+
+{% block main %}
+<ul>
+    <li>Marca: {{bici.marca}}</li>
+    <li>Modelo: {{bici.modelo}}</li>
+    <li>Anio: {{bici.anio}}</li>
+</ul>
+{% endblock main %}

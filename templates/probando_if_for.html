@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block header %}
+<h1>
+    Probando
+</h1>
+{% endblock header %}
+
+
+{% block main %}
+<ul>
+    {% for num in numeros %}
+        {% if num > 250 %}
+        <li style="color:red">Pepito {{num}}</li>
+        {% else %}
+        <li style="color:blue">Pepito {{num}}</li>
+        {% endif %}
+    {% endfor %}
+</ul>
+{% endblock main %}

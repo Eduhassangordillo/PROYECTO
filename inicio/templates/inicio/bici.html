@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block title_head %}
+Bicis
+{% endblock title_head %}
+
+{% block h1_header %}
+Listado de bicis
+{% endblock h1_header %}
+
+{% block main %}
+
+<a href={% url "crear_bici_v2" %}>Crear Bici</a>
+
+<form action={% url "Bicis" %} method="get">
+    {{formulario}}
+
+    <input type="submit" value="Buscar">
+
+</form>
+
+{% if bicis %}
+    <ul>    
+        {% for bici in bicis %}
+        <li>{{bici}} | 
+            <a href={% url "eliminar_bici" bici.id%}>Eliminar</a> | 
+            <a href={% url "editar_bici" bici.id%}>Editar</a> | 
+            <a href={% url "ver_bici" bici.id%}>Ver</a>
+        </li>
+        {% endfor %}
+    </ul>
+{% else %}
+<p>No hay bicis creados.</p>
+{% endif %}
+
+{% endblock main %}

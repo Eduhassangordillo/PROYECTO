@@ -1,0 +1,6 @@
+asgiref==3.8.1
+Django==5.0.6
+EduardoHassanGordillo-SegundaEntrega @ file:///C:/Users/eduar/Desktop/entrega
+setuptools==69.5.1
+sqlparse==0.5.0
+tzdata==2024.1
